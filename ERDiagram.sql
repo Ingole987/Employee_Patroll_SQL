@@ -18,3 +18,14 @@ constraint DefaultAddress_constraint default 'Mumbai' for address
 
 select * from employee_payroll
 
+alter table employee_payroll add deductions float;
+alter table employee_payroll add taxable_pay real;
+alter table employee_payroll add net_pay real;
+alter table employee_payroll add net real;
+
+select * from employee_payroll
+
+
+
+
+
