@@ -25,3 +25,15 @@ insert into employee_payroll(salary,name,start) values
 (100000.0,'Mark','2017-01-03')
 
 select * from employee_payroll;
+
+select salary from employee_payroll where name = 'billi'
+
+ALTER TABLE employee_payroll
+ADD Gender char(2)
+
+select * from employee_payroll;
+
+update employee_payroll set Gender = 'M' where name = 'Billi' or name = 'Charlie'or name = 'Mark';
+update employee_payroll set Gender = 'F' where name = 'Terisa';
+
+select * from employee_payroll;
