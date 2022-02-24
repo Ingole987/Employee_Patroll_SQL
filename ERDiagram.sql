@@ -22,6 +22,7 @@ alter table employee_payroll add deductions float;
 alter table employee_payroll add taxable_pay real;
 alter table employee_payroll add net_pay real;
 alter table employee_payroll add net real;
+alter table employee_payroll add tax real;
 
 select * from employee_payroll
 
@@ -36,6 +37,20 @@ update employee_payroll set  department= 'HR', Phone = 6131846313, address = '20
 update employee_payroll set department= 'quality', Phone = 5913564986, address = '153  Clarksburg Park Road' where name = 'Terisa';
 
 select*from employee_payroll
+
+update employee_payroll set deductions=1500, taxable_pay=0, net_pay=50000, tax=50000 where name = 'Billi';
+update employee_payroll set deductions=2000, taxable_pay=0, net_pay=70000, tax=30000 where name = 'Terisa';
+update employee_payroll set deductions=1000, taxable_pay=0, net_pay=80000, tax=50000 where name = 'Charlie';
+update employee_payroll set deductions=2500, taxable_pay=0, net_pay=20000, tax=40000 where name = 'Mark';
+update employee_payroll set deductions=1400, taxable_pay=0, net_pay=40000, tax=50000 where name = 'Terisa';
+
+select * from employee_payroll
+
+update employee_payroll set department = 'sales' where name = 'Terisa' 
+insert into employee_payroll(name,department,Gender,basic_pay,start) values
+('Terisa','Marketing','F', 200000.0,'2021-05-23')
+
+select * from employee_payroll
 
 
 
